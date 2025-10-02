@@ -28,7 +28,7 @@ A modern, sleek tool designed to simplify text analysis and document summarizati
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/yourusername/Text-Summarization-NLP.git
+   git clone https://github.com/akshatkmistry/Text-Summarizer---NLP-Project.git
    cd Text-Summarization-NLP
    ```
 
