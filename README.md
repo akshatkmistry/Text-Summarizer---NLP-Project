@@ -1,6 +1,9 @@
 # Text Summarizer - NLP Project
 
-**🚀 [Live Demo](https://text-summarizer-nlp-project-production.up.railway.app/)**
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-Railway-brightgreen?style=for-the-badge&logo=railway&logoColor=white)](https://text-summarizer-nlp-project-production.up.railway.app/)
+[![Python](https://img.shields.io/badge/Python-3.12-blue?style=for-the-badge&logo=python&logoColor=white)](https://python.org)
+[![Flask](https://img.shields.io/badge/Flask-Web%20Framework-red?style=for-the-badge&logo=flask&logoColor=white)](https://flask.palletsprojects.com)
+[![NLTK](https://img.shields.io/badge/NLTK-NLP-orange?style=for-the-badge)](https://nltk.org)
 
 A modern, sleek tool designed to simplify text analysis and document summarization using Natural Language Processing (NLP) techniques. You can quickly generate summaries and gain insights from your documents, making it easier to digest and understand large volumes of text.
 
