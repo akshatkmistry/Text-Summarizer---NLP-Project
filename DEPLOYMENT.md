@@ -1,55 +1,39 @@
-# 🚀 Heroku Deployment Guide
+# 🚀 Railway Deployment Guide
 
-This guide covers deploying your Text Summarization NLP application to Heroku.
+This guide covers deploying your Text Summarization NLP application to Railway.
 
-## 🟣 Heroku Deployment
+## � Railway Deployment (No Account Verification Required!)
 
 ### Prerequisites:
-- Heroku account (free tier available at [heroku.com](https://heroku.com))
-- Heroku CLI installed on your computer
+- Railway account (free tier available at [railway.app](https://railway.app))
+- GitHub repository (already done!)
 
-### Step 1: Install Heroku CLI
-1. **Download Heroku CLI**: Go to [devcenter.heroku.com/articles/heroku-cli](https://devcenter.heroku.com/articles/heroku-cli)
-2. **Install for your OS**: Follow the installation instructions for Windows/Mac/Linux
-3. **Verify installation**: Open terminal and run `heroku --version`
+### Step 1: Go to Railway
+1. **Visit**: [railway.app](https://railway.app)
+2. **Sign up with GitHub** (quick and easy!)
 
-### Step 2: Login to Heroku
-```bash
-heroku login
-```
-This will open your browser to login to Heroku.
+### Step 2: Deploy from GitHub
+1. **Click "Deploy from GitHub repo"**
+2. **Select your repository**: `Text-Summarizer---NLP-Project`
+3. **Railway automatically detects and deploys!**
 
-### Step 3: Create Heroku App
-```bash
-cd "c:\Users\aksha\Projects\Text-Summarization-NLP-main"
-heroku create your-app-name-here
-```
-Replace `your-app-name-here` with a unique name for your app.
-
-### Step 4: Deploy to Heroku
-```bash
-git add .
-git commit -m "Add Heroku deployment configuration"
-git push heroku main
-```
-
-### Step 5: Open Your Live App
-```bash
-heroku open
-```
-This will open your deployed app in the browser!
+### Step 3: Wait for Deployment
+- Railway will automatically:
+  - ✅ Detect Python Flask application
+  - ✅ Install dependencies from `requirements.txt`
+  - ✅ Download NLTK data via `wsgi.py`
+  - ✅ Start app with Gunicorn (configured in `railway.json`)
+  - ✅ Provide a live URL for your app
 
 ---
 
-## 🛠️ Configuration Files Explained:
+## 🛠️ Configuration Files:
 
-### `Procfile`
-Tells Heroku how to start your application:
-- `web: gunicorn wsgi:app` - Uses Gunicorn to serve your Flask app
-
-### `runtime.txt`
-Specifies the Python version:
-- `python-3.12.4` - Ensures Heroku uses the same Python version
+### `railway.json`
+Tells Railway how to build and start your application:
+- Uses Nixpacks builder for automatic detection
+- Starts with `gunicorn wsgi:app` command
+- Configures restart policy for reliability
 
 ### `wsgi.py`
 Production entry point that:
@@ -63,61 +47,31 @@ Lists all Python dependencies including:
 
 ---
 
-## 🎯 Why Heroku?
+## 🎯 Why Railway?
 
-- **Beginner-Friendly**: Most documented platform for beginners
-- **Free Tier**: Good for learning and small projects
-- **Git-Based**: Deploy with simple `git push`
-- **Add-ons**: Easy to add databases, monitoring, etc.
-- **Popular**: Large community and lots of tutorials
+- **No Verification**: No credit card required for free tier
+- **Easy Setup**: No complex configuration needed
+- **Generous Free Tier**: More resources than many competitors
+- **Modern Interface**: Clean, intuitive dashboard
+- **Auto-Deploy**: Push to GitHub = instant deployment
+- **Good Performance**: Fast cold starts and reliable uptime
 
 ---
 
-## 🚨 Important Notes:
+## 🚨 After Deployment:
 
-### Heroku Free Tier Limitations:
-- **Dyno Sleep**: App sleeps after 30 minutes of inactivity
-- **Hours Limit**: 550 free hours per month (1000 with credit card)
-- **Cold Start**: First request after sleep takes longer
-
-### After Deployment:
 1. **Test all features**: Text summarization, sentiment analysis, word cloud
-2. **Check logs**: Use `heroku logs --tail` to monitor your app
-3. **Scale if needed**: `heroku ps:scale web=1` to ensure one dyno is running
-4. **Add domain**: Optionally add your custom domain
+2. **Check logs**: Use Railway dashboard to monitor app health
+3. **Custom domain**: Optionally add your own domain name
+4. **Environment variables**: Add any config via Railway dashboard
+
+Your Text Summarization NLP app will be live and accessible worldwide! 🌍✨
 
 ---
 
-## 🛠️ Useful Heroku Commands:
+## 🔄 Alternative: Heroku (Requires Verification)
 
-```bash
-# View app logs
-heroku logs --tail
-
-# Check app status
-heroku ps
-
-# Open app in browser
-heroku open
-
-# Run commands on Heroku
-heroku run python
-
-# Restart app
-heroku restart
-```
-
----
-
-## 🎉 Success!
-
-Your Text Summarization NLP app will be live at:
-`https://your-app-name.herokuapp.com`
-
-The app will automatically:
-- ✅ Install all dependencies
-- ✅ Download NLTK data
-- ✅ Start with Gunicorn
-- ✅ Handle web traffic
-
-Your app is now accessible worldwide! 🌍✨
+If you prefer Heroku and want to verify your account:
+1. **Go to**: https://heroku.com/verify
+2. **Add payment information** (free tier won't charge you)
+3. **Come back and use**: `heroku create your-app-name`
