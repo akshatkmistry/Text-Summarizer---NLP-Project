@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Text Summarizer - Result</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Exo+2:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static',filename='style.css') }}">
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='icons.png') }}">
+</head>
+    <header>
+        <h1 style="font-family: 'Orbitron', 'Exo 2', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-weight: 700; color: #f0f0f0; letter-spacing: 2px;">Welcome to Text Summarizer</h1>
+    </header>
+    <body>
+        <br>
+        <div class="answer">
+        
+        <img src="/static/images/wordcloud.png" style="display: block; margin: 0 auto; border-radius: 10px; min-width:400px; min-height: 250px;">
+        </div>
+        <footer>
+            <p>&copy; 2025 Text Summarizer</p>
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Text Summarizer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Exo+2:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='icons.png') }}">
+</head>
+<body>
+    <header>
+        <h1 style="font-family: 'Orbitron', 'Exo 2', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-weight: 700; color: #f0f0f0; letter-spacing: 2px;">Welcome to Text Summarizer</h1>
+    </header>
+    <section class="hero">
+        <!-- <form method="POST" action="/analyze" enctype="multipart/form-data">
+            <textarea name="text" rows="13" cols="50" placeholder="Enter your text here..."></textarea><br>
+            <input type="file" name="pdf_file" accept=".pdf" id="files">
+            <br><br>
+            <select name="action">
+                <option value="summarize">Summarize Text</option>
+                <option value="sentiment">Sentiment Analysis</option>
+                <option value="wordcloud">Word Cloud</option>
+            </select>
+            <input type="submit" value="Perform Action">
+        </form> -->
+        <form method="POST" action="/analyze" enctype="multipart/form-data">
+            <textarea name="text" rows="13" cols="50" placeholder="Enter your text here..."></textarea><br>
+            <div class="box">
+                <input type="file" name="pdf_file" accept=".pdf" id="files">
+                <button type="button" onclick="removeFile()">Remove</button>
+            </div>
+            <br>
+            <select name="action">
+                <option value="summarize">Summarize Text</option>
+                <option value="sentiment">Sentiment Analysis</option>
+                <option value="wordcloud">Word Cloud</option>
+            </select>
+            <input type="submit" value="Perform Action">
+        </form>
+    </section>
+    <footer>
+        <p>&copy; 2025 Text Summarizer</p>
+    </footer>
+    <script>
+        // Function to remove the selected file
+        function removeFile() {
+            var fileInput = document.getElementById("files");
+            fileInput.value = "";  // Clear the file input value
+        }
+    </script>
+</body>
+</html>
