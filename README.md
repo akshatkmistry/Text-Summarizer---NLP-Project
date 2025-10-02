@@ -1,4 +1,7 @@
 # Text Summarizer - NLP Project
+
+**🚀 [Live Demo](https://text-summarizer-nlp-project-production.up.railway.app/)**
+
 A modern, sleek tool designed to simplify text analysis and document summarization using Natural Language Processing (NLP) techniques. You can quickly generate summaries and gain insights from your documents, making it easier to digest and understand large volumes of text.
 
 ## ✨ Features
