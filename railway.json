@@ -4,7 +4,7 @@
     "builder": "NIXPACKS"
   },
   "deploy": {
-    "startCommand": "gunicorn wsgi:app",
+    "startCommand": "python -c \"import nltk; import ssl; ssl._create_default_https_context = ssl._create_unverified_context; nltk.download('punkt_tab', quiet=True); nltk.download('punkt', quiet=True); nltk.download('stopwords', quiet=True); nltk.download('vader_lexicon', quiet=True)\" && gunicorn wsgi:app",
     "restartPolicyType": "ON_FAILURE",
     "restartPolicyMaxRetries": 10
   }
